@@ -50,11 +50,11 @@ public class Main {
         BufferedReader stdError = new BufferedReader(new InputStreamReader(process.getErrorStream()));
         String s = null;
 
-        while ((s = stdInput.readLine()) != null) {
+        while ((s = stdError.readLine()) != null) {
             System.out.println(s);
         }
 
-        while ((s = stdError.readLine()) != null) {
+        while ((s = stdInput.readLine()) != null) {
             System.out.println(s);
         }
     }
